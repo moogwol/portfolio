@@ -1,4 +1,12 @@
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button, CardImg, Col} from 'reactstrap'
+import  pengen  from "./images/pengen.png";
+console.log(pengen); 
+
+function handleClick(url) {
+  console.log(url);
+  // window.location.href=url
+  window.open(url)
+}
 
 function ProjectCard(props) {
     return (
@@ -8,7 +16,7 @@ function ProjectCard(props) {
   >
       <CardImg
       alt="Card image cap"
-      src="https://picsum.photos/696/248"
+      src={props.image}
       top
       width="100%"
     />
@@ -23,9 +31,10 @@ function ProjectCard(props) {
         {props.subtitle}
       </CardSubtitle>
       <CardText>
-        Some quick example text 
+        {props.text} 
       </CardText>
-      <Button>
+      {/* <Button onClick={handleClick.bind(this, props.url)}> */}
+      <Button onClick={() => handleClick(props.url)}>
         View the project
       </Button>
     </CardBody>
