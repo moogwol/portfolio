@@ -6,7 +6,7 @@ import Navigation from './nav'
 
 function App() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" id="main-container">
       <Navigation />
       <Banner />
       <Group />

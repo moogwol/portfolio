@@ -1,4 +1,4 @@
-import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button, CardImg, Col} from 'reactstrap'
+import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button, CardImg} from 'reactstrap'
 import  pengen  from "./images/pengen.png";
 console.log(pengen); 
 
@@ -11,8 +11,8 @@ function handleClick(url) {
 function ProjectCard(props) {
     return (
   <Card
-    color="light"
-    className="m-1 rounded border-dark" 
+    color="dark"
+    className="m-1 rounded border-dark card bg-transparent" 
   >
       <CardImg
       alt="Card image cap"
@@ -20,7 +20,7 @@ function ProjectCard(props) {
       top
       width="100%"
     />
-    <CardBody>
+    <CardBody className="cardbody ">
       <CardTitle tag="h5">
         {props.title}
       </CardTitle>
@@ -30,7 +30,7 @@ function ProjectCard(props) {
       >
         {props.subtitle}
       </CardSubtitle>
-      <CardText>
+      <CardText className="cardtext">
         {props.text} 
       </CardText>
       {/* <Button onClick={handleClick.bind(this, props.url)}> */}
