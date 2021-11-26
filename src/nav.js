@@ -1,61 +1,29 @@
-import {Navbar, NavItem, NavbarBrand, NavbarToggler, NavbarText, NavLink, Collapse,
-        Nav, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu  } from 'reactstrap'
+import {Navbar, NavItem, NavbarToggler, NavLink, Nav} from 'reactstrap'
 
 function Navigation() {
     return (
         <div>
-  <Navbar
-    color="light"
+  <Navbar className="navigation"
     expand="md"
-    light
   >
-    <NavbarBrand href="/">
-      reactstrap
-    </NavbarBrand>
+ 
     <NavbarToggler onClick={function noRefCheck(){}} />
-    <Collapse navbar>
       <Nav
-        className="me-auto"
+        className="me-auto nav"
         navbar
       >
         <NavItem>
           <NavLink href="/components/">
-            Components
+            Blog
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="https://github.com/reactstrap/reactstrap">
+          <NavLink href="https://github.com/moogwol/">
             GitHub
           </NavLink>
         </NavItem>
-        <UncontrolledDropdown
-          inNavbar
-          nav
-        >
-          <DropdownToggle
-            caret
-            nav
-          >
-            Options
-          </DropdownToggle>
-          <DropdownMenu end>
-            <DropdownItem>
-              Option 1
-            </DropdownItem>
-            <DropdownItem>
-              Option 2
-            </DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>
-              Reset
-            </DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown>
+
       </Nav>
-      <NavbarText>
-        Simple Text
-      </NavbarText>
-    </Collapse>
   </Navbar>
 </div>
     )

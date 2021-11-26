@@ -1,21 +1,59 @@
+:root {
+  --highlight-colour: #fffdc7f5;
+  --button-colour: #3c828a87;
+}
+
 body {
   background-image: url('https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_960_720.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
-.cardbody {
-  background: inherit;
-  backdrop-filter: blur(10px);
-  box-shadow: 10px 10px 20px 5px #c8dcb5;  
+h1 {
+  color: var(--highlight-colour);
 }
 
+.banner p {
+  color: var(--highlight-colour);
+
+}
+
+
 .card {
-  background: inherit;
-  backdrop-filter: blur(10px);  
+  opacity: 0.8;
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 10px 20px 8px var(--button-colour);
+  color: var(--highlight-colour);
+}
+
+.card:hover {
+  opacity: 1;
+  backdrop-filter: blur(20px);
+  box-shadow: 10px 10px 20px 8px var(--highlight-colour);
+  color: var(--highlight-colour);
 }
 
 .card button {
-  opacity: 1;
+  background-color: var(--button-colour);
+}
+
+.card button:hover {
+    color: #2a6eb3;
+    background-color: var(--highlight-colour);
+}
+
+.image {
+  border: 3px solid var(--button-colour);
+}
+
+.navigation {
+  background-color: var(--button-colour);
+}
+
+.navigation a {
+  color: white
+}
+
+.nav-link:hover {
+  color: var(--highlight-colour);
 }

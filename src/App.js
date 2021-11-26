@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container-fluid" id="main-container">
       <Navigation />
-      <Banner />
+      <Banner className="banner"/>
       <Group />
     </div>
   );
